@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Navbar, NavbarBrand, Nav, Input, NavItem, NavLink, Collapse, NavbarToggler} from 'reactstrap';
+import {Navbar, NavbarBrand, Nav, Input, NavItem, Collapse, NavbarToggler} from 'reactstrap';
+import {Link, NavLink} from 'react-router-dom';
 
 class NavbarBookstr extends Component{
 
@@ -28,22 +29,25 @@ class NavbarBookstr extends Component{
               <Input/>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Favorites</NavLink>
+              <NavLink to="/home" className="nav-link">Favorites</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">My Books</NavLink>
+              <NavLink to="/home" className="nav-link">My Books</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Global</NavLink>
+              <NavLink to="/home" className="nav-link">Global</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Local</NavLink>
+              <NavLink to="/home" className="nav-link">Local</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Following</NavLink>
+              <NavLink to="/home" className="nav-link">Following</NavLink>
             </NavItem>
           </Nav>
           <Nav className="ml-auto" navbar>
+            <NavItem>
+              <Link to="/editor" className="btn btn-primary mr-2 mt-2">Write</Link>
+            </NavItem>
             <NavItem>
               <Nav vertical className="mr-2">
                 <NavItem>

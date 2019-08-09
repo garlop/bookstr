@@ -1,15 +1,16 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Editor from './components/EditorComponent';
-import NavbarBookstr from './components/NavBarComponent';
+import Main from './components/MainComponent';
 
 function App() {
   return (
-    <div className="App">
-      <NavbarBookstr/>
-      <Editor/>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Main/>
+      </div>
+    </BrowserRouter>
   );
 }
 
